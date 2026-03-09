@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FCG.Shared.Domain/FCG.Shared.Domain.csproj" />
+    <Project Path="src/FCG.Shared.Infrastructure/FCG.Shared.Infrastructure.csproj" />
+  </Folder>
+</Solution>
