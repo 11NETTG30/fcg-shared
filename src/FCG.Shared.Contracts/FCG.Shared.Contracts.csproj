@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>FCG.Shared.Contracts</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>11NETTG30</Authors>
+        <Description>Contratos de eventos compartilhados do FIAP Cloud Games</Description>
+        <RepositoryUrl>https://github.com/11NETTG30/fcg-shared</RepositoryUrl>
+    </PropertyGroup>
+</Project>

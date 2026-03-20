@@ -1,4 +1,4 @@
-name: Publicar pacotes NuGet
+name: Publicar FCG.Shared.Contracts
 
 on:
   workflow_dispatch:
@@ -20,16 +20,13 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restaurar dependências
-        run: dotnet restore FCG.Shared.slnx
+        run: dotnet restore src/FCG.Shared.Contracts/FCG.Shared.Contracts.csproj
 
       - name: Build
-        run: dotnet build FCG.Shared.slnx --configuration Release --no-restore
+        run: dotnet build src/FCG.Shared.Contracts/FCG.Shared.Contracts.csproj --configuration Release --no-restore
 
-      - name: Pack FCG.Shared.Domain
-        run: dotnet pack src/FCG.Shared.Domain/FCG.Shared.Domain.csproj --configuration Release --no-build --output ./nupkgs
-
-      - name: Pack FCG.Shared.Infrastructure
-        run: dotnet pack src/FCG.Shared.Infrastructure/FCG.Shared.Infrastructure.csproj --configuration Release --no-build --output ./nupkgs
+      - name: Pack
+        run: dotnet pack src/FCG.Shared.Contracts/FCG.Shared.Contracts.csproj --configuration Release --no-build --output ./nupkgs
 
       - name: Publicar no GitHub Packages
         run: dotnet nuget push ./nupkgs/*.nupkg --source https://nuget.pkg.github.com/11NETTG30/index.json --api-key ${{ secrets.GITHUB_TOKEN }} --skip-duplicate
