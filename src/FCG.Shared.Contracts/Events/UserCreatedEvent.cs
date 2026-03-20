@@ -1,3 +1,3 @@
 namespace FCG.Shared.Contracts.Events;
 
-public sealed record UserCreatedEvent(Guid UserId, string Email, string Nome);
+public sealed record UserCreatedEvent(Guid UsuarioId, string Email, string Nome);
