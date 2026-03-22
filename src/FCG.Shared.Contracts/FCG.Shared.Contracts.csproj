@@ -4,7 +4,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>FCG.Shared.Contracts</PackageId>
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
         <Authors>11NETTG30</Authors>
         <Description>Contratos de eventos compartilhados do FIAP Cloud Games</Description>
         <RepositoryUrl>https://github.com/11NETTG30/fcg-shared</RepositoryUrl>
