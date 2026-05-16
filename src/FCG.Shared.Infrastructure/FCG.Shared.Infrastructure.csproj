@@ -4,7 +4,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <PackageId>FCG.Shared.Infrastructure</PackageId>
-        <Version>1.1.0</Version>
+        <Version>1.2.0</Version>
         <Authors>11NETTG30</Authors>
         <Description>Infraestrutura compartilhada do FIAP Cloud Games</Description>
         <RepositoryUrl>https://github.com/11NETTG30/fcg-shared</RepositoryUrl>
@@ -16,6 +16,8 @@
         <ProjectReference Include="..\FCG.Shared.Domain\FCG.Shared.Domain.csproj" />
     </ItemGroup>
     <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.5" />
+        <PackageReference Include="StackExchange.Redis" Version="2.8.41" />
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="10.0.2" />
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" />
         <PackageReference Include="OpenTelemetry" Version="1.12.0" />
