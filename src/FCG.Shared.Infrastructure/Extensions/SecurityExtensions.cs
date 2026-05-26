@@ -5,7 +5,7 @@ namespace FCG.Shared.Infrastructure.Extensions
 {
 	public static class SecurityExtensions
 	{
-		public static WebApplicationBuilder AddFCGSecurity(this WebApplicationBuilder builder)
+		public static WebApplicationBuilder AddSecurity(this WebApplicationBuilder builder)
 		{
 			builder.Services.AddIdentityPropagation();
 
