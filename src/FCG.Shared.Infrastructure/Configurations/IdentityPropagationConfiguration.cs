@@ -29,7 +29,7 @@ namespace FCG.Shared.Infrastructure.Configurations
 						RoleClaimType = "role",
 
 						// Apenas lê o token de forma "cega"
-						SignatureValidator = (token, parameters) => new JwtSecurityToken(token)
+						SignatureValidator = (token, parameters) => new Microsoft.IdentityModel.JsonWebTokens.JsonWebToken(token),
 					};
 				});
 
