@@ -1,3 +1,4 @@
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using FCG.Shared.Application;
 using FCG.Shared.Domain.Exceptions;
@@ -22,8 +23,8 @@ public sealed class InformacoesUsuarioLogado : IInformacoesUsuarioLogado
 
         ClaimsPrincipal user = httpContextAccessor.HttpContext.User;
 
-        Id = Guid.Parse(user.FindFirst(ClaimTypes.NameIdentifier)!.Value);
-        Email = user.FindFirst(ClaimTypes.Email)!.Value;
-        Administrador = user.IsInRole("admin");
+		Id = Guid.Parse(user.FindFirst(JwtRegisteredClaimNames.Sub)!.Value);
+		Email = user.FindFirst(JwtRegisteredClaimNames.Email)!.Value;
+		Administrador = user.IsInRole("admin");
     }
 }
